@@ -60,7 +60,7 @@ p <- ggplot(data = results,
             aes(x = half_seconds, y = timeouts, group = qtr, 
                 color = as.factor(qtr)))
 p + geom_point() +
-  geom_line() +
+  geom_line(lwd = 1.2) +
   theme_bw() +
   scale_color_brewer("quarter", palette = "Set1") +
   labs(x = "seconds remaining in the half",
@@ -73,8 +73,8 @@ p <- ggplot(data = results,
             aes(x = half_seconds, y = proportion, group = qtr, 
                 color = as.factor(qtr)))
 p + geom_point() +
-  geom_line() +
-  theme_minimal() +
+  geom_line(lwd = 1.2) +
+  theme_bw() +
   scale_color_brewer("quarter", palette = "Set1") +
   labs(x = "seconds remaining in the half",
        y = "proportion of FGs with TOs prior") +
